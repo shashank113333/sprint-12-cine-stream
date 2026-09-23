@@ -1,0 +1,370 @@
+{
+  "v": 0,
+  "components": {
+    "example-button": {
+      "id": "example-button",
+      "name": "Button",
+      "path": "./src/stories/Button.stories.js",
+      "jsDocTags": {},
+      "description": "Primary UI component for user interaction",
+      "reactDocgen": {
+        "description": "Primary UI component for user interaction",
+        "methods": [],
+        "displayName": "Button",
+        "definedInFile": "F:\\sprint-12-cine-stream\\src\\stories\\Button.jsx",
+        "actualName": "Button",
+        "exportName": "Button",
+        "props": {
+          "backgroundColor": {
+            "defaultValue": {
+              "value": "null",
+              "computed": false
+            },
+            "description": "What background color to use",
+            "type": {
+              "name": "string"
+            },
+            "required": false
+          },
+          "primary": {
+            "defaultValue": {
+              "value": "false",
+              "computed": false
+            },
+            "description": "Is this the principal call to action on the page?",
+            "type": {
+              "name": "bool"
+            },
+            "required": false
+          },
+          "size": {
+            "defaultValue": {
+              "value": "'medium'",
+              "computed": false
+            },
+            "description": "How large should the button be?",
+            "type": {
+              "name": "enum",
+              "value": [
+                {
+                  "value": "'small'",
+                  "computed": false
+                },
+                {
+                  "value": "'medium'",
+                  "computed": false
+                },
+                {
+                  "value": "'large'",
+                  "computed": false
+                }
+              ]
+            },
+            "required": false
+          },
+          "onClick": {
+            "defaultValue": {
+              "value": "undefined",
+              "computed": true
+            },
+            "description": "Optional click handler",
+            "type": {
+              "name": "func"
+            },
+            "required": false
+          },
+          "label": {
+            "description": "Button contents",
+            "type": {
+              "name": "string"
+            },
+            "required": true
+          }
+        }
+      },
+      "stories": [
+        {
+          "id": "example-button--primary",
+          "name": "Primary",
+          "snippet": "const Primary = () => <Button onClick={fn()} primary label=\"Button\" />;"
+        },
+        {
+          "id": "example-button--secondary",
+          "name": "Secondary",
+          "snippet": "const Secondary = () => <Button onClick={fn()} label=\"Button\" />;"
+        },
+        {
+          "id": "example-button--large",
+          "name": "Large",
+          "snippet": "const Large = () => <Button onClick={fn()} size=\"large\" label=\"Button\" />;"
+        },
+        {
+          "id": "example-button--small",
+          "name": "Small",
+          "snippet": "const Small = () => <Button onClick={fn()} size=\"small\" label=\"Button\" />;"
+        }
+      ],
+      "import": "import { Button } from 'sprint-11-cine-stream';\nimport { fn } from 'storybook/test';"
+    },
+    "components-filtersidebar": {
+      "id": "components-filtersidebar",
+      "name": "FilterSidebar",
+      "path": "./src/stories/FilterSidebar.stories.jsx",
+      "jsDocTags": {},
+      "reactDocgen": {
+        "description": "",
+        "methods": [],
+        "displayName": "FilterSidebar",
+        "definedInFile": "F:\\sprint-12-cine-stream\\src\\components\\FilterSidebar.jsx",
+        "actualName": "FilterSidebar",
+        "exportName": "FilterSidebar"
+      },
+      "stories": [
+        {
+          "id": "components-filtersidebar--default-filters",
+          "name": "Default Filters",
+          "snippet": "const DefaultFilters = () => <FilterSidebar />;"
+        },
+        {
+          "id": "components-filtersidebar--action-genre-active",
+          "name": "Action Genre Active",
+          "snippet": "const ActionGenreActive = () => <FilterSidebar />;"
+        },
+        {
+          "id": "components-filtersidebar--high-rating-filtered",
+          "name": "High Rating Filtered",
+          "snippet": "const HighRatingFiltered = () => <FilterSidebar />;"
+        },
+        {
+          "id": "components-filtersidebar--year-filtered",
+          "name": "Year Filtered",
+          "snippet": "const YearFiltered = () => <FilterSidebar />;"
+        }
+      ],
+      "import": "import { FilterSidebar } from 'sprint-11-cine-stream';\nimport { Provider } from 'react-redux';"
+    },
+    "example-header": {
+      "id": "example-header",
+      "name": "Header",
+      "path": "./src/stories/Header.stories.js",
+      "jsDocTags": {},
+      "reactDocgen": {
+        "description": "",
+        "methods": [],
+        "displayName": "Header",
+        "definedInFile": "F:\\sprint-12-cine-stream\\src\\stories\\Header.jsx",
+        "actualName": "Header",
+        "exportName": "Header",
+        "props": {
+          "user": {
+            "defaultValue": {
+              "value": "null",
+              "computed": false
+            },
+            "description": "",
+            "type": {
+              "name": "shape",
+              "value": {
+                "name": {
+                  "name": "string",
+                  "required": true
+                }
+              }
+            },
+            "required": false
+          },
+          "onLogin": {
+            "description": "",
+            "type": {
+              "name": "func"
+            },
+            "required": true
+          },
+          "onLogout": {
+            "description": "",
+            "type": {
+              "name": "func"
+            },
+            "required": true
+          },
+          "onCreateAccount": {
+            "description": "",
+            "type": {
+              "name": "func"
+            },
+            "required": true
+          }
+        }
+      },
+      "stories": [
+        {
+          "id": "example-header--logged-in",
+          "name": "Logged In",
+          "snippet": "const LoggedIn = () => <Header\r\n    onLogin={fn()}\r\n    onLogout={fn()}\r\n    onCreateAccount={fn()}\r\n    user={{\r\n      name: 'Jane Doe',\r\n    }} />;"
+        },
+        {
+          "id": "example-header--logged-out",
+          "name": "Logged Out",
+          "snippet": "const LoggedOut = () => <Header onLogin={fn()} onLogout={fn()} onCreateAccount={fn()} />;"
+        }
+      ],
+      "import": "import { Header } from 'sprint-11-cine-stream';\nimport { fn } from 'storybook/test';"
+    },
+    "components-moviecard": {
+      "id": "components-moviecard",
+      "name": "MovieCard",
+      "path": "./src/stories/MovieCard.stories.jsx",
+      "jsDocTags": {},
+      "reactDocgen": {
+        "description": "",
+        "methods": [],
+        "displayName": "MovieCard",
+        "definedInFile": "F:\\sprint-12-cine-stream\\src\\components\\MovieCard.jsx",
+        "actualName": "MovieCard",
+        "exportName": "MovieCard"
+      },
+      "stories": [
+        {
+          "id": "components-moviecard--default",
+          "name": "Default",
+          "snippet": "const Default = () => <MovieCard\r\n    movie={{\r\n      id: 550,\r\n      title: 'Fight Club',\r\n      poster_path: '/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg',\r\n      vote_average: 8.4,\r\n      release_date: '1999-10-15',\r\n    }} />;"
+        },
+        {
+          "id": "components-moviecard--high-rated",
+          "name": "High Rated",
+          "snippet": "const HighRated = () => <MovieCard\r\n    movie={{\r\n      id: 278,\r\n      title: 'The Shawshank Redemption',\r\n      poster_path: '/9cqN121GvOiW2Vj0efk3jG6T4g9.jpg',\r\n      vote_average: 9.3,\r\n      release_date: '1994-09-23',\r\n    }} />;"
+        },
+        {
+          "id": "components-moviecard--long-title",
+          "name": "Long Title",
+          "snippet": "const LongTitle = () => <MovieCard\r\n    movie={{\r\n      id: 12345,\r\n      title: 'Spider-Man: Across the Spider-Verse - Special Extended Collectors Edition 2024',\r\n      poster_path: '/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg',\r\n      vote_average: 8.7,\r\n      release_date: '2023-06-02',\r\n    }} />;"
+        },
+        {
+          "id": "components-moviecard--no-poster-fallback",
+          "name": "No Poster Fallback",
+          "snippet": "const NoPosterFallback = () => <MovieCard\r\n    movie={{\r\n      id: 99999,\r\n      title: 'Unreleased Indie Film',\r\n      poster_path: null,\r\n      vote_average: 7.2,\r\n      release_date: '2025-11-20',\r\n    }} />;"
+        },
+        {
+          "id": "components-moviecard--action-movie",
+          "name": "Action Movie",
+          "snippet": "const ActionMovie = () => <MovieCard\r\n    movie={{\r\n      id: 155,\r\n      title: 'The Dark Knight',\r\n      poster_path: '/qJ2tW6WMUDux911r6m7haRef0WH.jpg',\r\n      vote_average: 9.0,\r\n      release_date: '2008-07-18',\r\n    }} />;"
+        }
+      ],
+      "import": "import { MovieCard } from 'sprint-11-cine-stream';"
+    },
+    "components-navbar": {
+      "id": "components-navbar",
+      "name": "Navbar",
+      "path": "./src/stories/Navbar.stories.jsx",
+      "jsDocTags": {},
+      "reactDocgen": {
+        "description": "",
+        "methods": [],
+        "displayName": "Navbar",
+        "definedInFile": "F:\\sprint-12-cine-stream\\src\\components\\Navbar.jsx",
+        "actualName": "Navbar",
+        "exportName": "Navbar"
+      },
+      "stories": [
+        {
+          "id": "components-navbar--default-no-favorites",
+          "name": "Default No Favorites",
+          "snippet": "const DefaultNoFavorites = () => <Navbar />;"
+        },
+        {
+          "id": "components-navbar--with-favorites-count",
+          "name": "With Favorites Count",
+          "snippet": "const WithFavoritesCount = () => <Navbar />;"
+        },
+        {
+          "id": "components-navbar--light-theme-selected",
+          "name": "Light Theme Selected",
+          "snippet": "const LightThemeSelected = () => <Navbar />;"
+        },
+        {
+          "id": "components-navbar--cyberpunk-theme-selected",
+          "name": "Cyberpunk Theme Selected",
+          "snippet": "const CyberpunkThemeSelected = () => <Navbar />;"
+        }
+      ],
+      "import": "import { Navbar } from 'sprint-11-cine-stream';\nimport { Provider } from 'react-redux';"
+    },
+    "example-page": {
+      "id": "example-page",
+      "name": "Page",
+      "path": "./src/stories/Page.stories.js",
+      "jsDocTags": {},
+      "reactDocgen": {
+        "description": "",
+        "methods": [],
+        "displayName": "Page",
+        "definedInFile": "F:\\sprint-12-cine-stream\\src\\stories\\Page.jsx",
+        "actualName": "Page",
+        "exportName": "Page"
+      },
+      "stories": [
+        {
+          "id": "example-page--logged-out",
+          "name": "Logged Out",
+          "snippet": "const LoggedOut = () => <Page />;"
+        },
+        {
+          "id": "example-page--logged-in",
+          "name": "Logged In",
+          "snippet": "const LoggedIn = () => <Page />;"
+        }
+      ],
+      "import": "import { Page } from 'sprint-11-cine-stream';"
+    },
+    "components-searchbar": {
+      "id": "components-searchbar",
+      "name": "SearchBar",
+      "path": "./src/stories/SearchBar.stories.jsx",
+      "jsDocTags": {},
+      "reactDocgen": {
+        "description": "",
+        "methods": [],
+        "displayName": "SearchBar",
+        "definedInFile": "F:\\sprint-12-cine-stream\\src\\components\\SearchBar.jsx",
+        "actualName": "SearchBar",
+        "exportName": "SearchBar",
+        "props": {
+          "placeholder": {
+            "defaultValue": {
+              "value": "'Search movies (e.g. Batman)...'",
+              "computed": false
+            },
+            "required": false
+          }
+        }
+      },
+      "stories": [
+        {
+          "id": "components-searchbar--empty-default",
+          "name": "Empty Default",
+          "snippet": "const EmptyDefault = () => <SearchBar value=\"\" placeholder=\"Search movies (e.g. Batman)...\" />;"
+        },
+        {
+          "id": "components-searchbar--with-search-query",
+          "name": "With Search Query",
+          "snippet": "const WithSearchQuery = () => <SearchBar value=\"Batman\" placeholder=\"Search movies (e.g. Batman)...\" />;"
+        },
+        {
+          "id": "components-searchbar--custom-placeholder",
+          "name": "Custom Placeholder",
+          "snippet": "const CustomPlaceholder = () => <SearchBar value=\"\" placeholder=\"Explore sci-fi series, anime & documentaries...\" />;"
+        },
+        {
+          "id": "components-searchbar--interactive",
+          "name": "Interactive",
+          "snippet": "const Interactive = () => {\r\n  const [val, setVal] = useState('Inception');\r\n  return (\r\n    <SearchBar\r\n      value={val}\r\n      onChange={(newVal) => setVal(newVal)}\r\n      onClear={() => setVal('')}\r\n      placeholder=\"Type to search dynamically...\"\r\n    />\r\n  );\r\n};"
+        }
+      ],
+      "import": "import { SearchBar } from 'sprint-11-cine-stream';"
+    }
+  },
+  "meta": {
+    "docgen": "react-docgen",
+    "durationMs": 2521
+  }
+}
