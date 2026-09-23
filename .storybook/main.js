@@ -1,5 +1,3 @@
-
-
 /** @type { import('@storybook/nextjs-vite').StorybookConfig } */
 const config = {
   "stories": [
@@ -15,7 +13,7 @@ const config = {
   ],
   "framework": "@storybook/nextjs-vite",
   "staticDirs": [
-    "..\\public"
+    "../public"
   ]
 };
 export default config;
